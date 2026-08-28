@@ -6490,3 +6490,86 @@ p {
         bottom: 20px !important;
     }
 }
+
+/* =========================================================
+   RV WEBSITES — ABOVE LAPTOP
+========================================================= */
+
+.laptop-brand {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 12px;
+    padding-left: 24px;
+
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    text-transform: uppercase;
+}
+
+
+/* Small premium indicator */
+
+.laptop-brand::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #a78bfa;
+
+    box-shadow:
+        0 0 10px
+        rgba(167, 139, 250, 0.65);
+}
+
+
+/* Desktop */
+
+@media (min-width: 769px) {
+
+    .laptop-brand {
+        margin-bottom: 14px;
+        padding-left: 24px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .laptop-brand {
+        justify-content: center;
+
+        margin-bottom: 10px;
+        padding-left: 0;
+
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    .laptop-brand::before {
+        width: 5px;
+        height: 5px;
+
+        margin-right: 7px;
+    }
+}
