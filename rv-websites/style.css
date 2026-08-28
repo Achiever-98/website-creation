@@ -8816,4 +8816,505 @@ body::before {
     }
 
 }
-```
+
+
+
+/* =========================================================
+   V2.1.4 — HERO DEVICE BALANCE + MOBILE POLISH
+========================================================= */
+
+
+/* =========================================================
+   MACBOOK — SHOW MORE OF THE WEBSITE
+========================================================= */
+
+.laptop {
+    max-width: 720px !important;
+}
+
+.laptop-screen {
+    padding: 18px !important;
+}
+
+
+/* Reduce excessive spacing inside the website preview */
+
+.mockup-nav {
+    margin-bottom: 18px !important;
+}
+
+.mockup-content {
+    margin-top: 0 !important;
+}
+
+.mockup-content h2 {
+    margin-top: 7px !important;
+    margin-bottom: 8px !important;
+}
+
+.mockup-content p {
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+}
+
+
+/* Keep dashboard visible but compact */
+
+.mockup-dashboard {
+    transform: scale(.82) !important;
+    transform-origin: bottom right !important;
+}
+
+
+/* =========================================================
+   HERO DEVICE COMPOSITION
+========================================================= */
+
+.hero-visual {
+    position: relative !important;
+}
+
+
+/* Keep phone secondary to laptop */
+
+.hero-phone {
+    width: 145px !important;
+
+    right: 1% !important;
+    bottom: 1% !important;
+
+    transform:
+        rotate(3deg)
+        translateY(0) !important;
+
+    z-index: 10 !important;
+}
+
+
+/* =========================================================
+   PHONE — DESKTOP
+========================================================= */
+
+.hero-phone-screen {
+    min-height: 300px !important;
+}
+
+.phone-site-content {
+    padding-top: 35px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* ---------------------------------------------
+       Remove unnecessary empty space above hero
+    --------------------------------------------- */
+
+    .hero-visual {
+        min-height: 390px !important;
+
+        padding:
+            5px 5px 35px !important;
+
+        margin-top:
+            0 !important;
+    }
+
+
+    /* ---------------------------------------------
+       Laptop
+    --------------------------------------------- */
+
+    .laptop {
+        width:
+            94% !important;
+
+        max-width:
+            none !important;
+
+        transform:
+            translateY(0) !important;
+    }
+
+
+    .laptop-screen {
+        padding:
+            12px !important;
+
+        border-radius:
+            13px 13px 5px 5px !important;
+    }
+
+
+    .laptop-base {
+        height:
+            9px !important;
+    }
+
+
+    /* More useful website content */
+
+    .mockup-nav {
+        margin-bottom:
+            9px !important;
+    }
+
+
+    .mockup-content {
+        margin-top:
+            0 !important;
+    }
+
+
+    .mockup-content small {
+        font-size:
+            5px !important;
+
+        letter-spacing:
+            1px !important;
+    }
+
+
+    .mockup-content h2 {
+        font-size:
+            clamp(18px, 5.8vw, 27px) !important;
+
+        line-height:
+            1.02 !important;
+
+        margin:
+            5px 0 6px !important;
+    }
+
+
+    .mockup-content p {
+        max-width:
+            170px !important;
+
+        font-size:
+            6px !important;
+
+        line-height:
+            1.4 !important;
+
+        margin:
+            4px 0 7px !important;
+    }
+
+
+    .mockup-button {
+        padding:
+            5px 8px !important;
+
+        font-size:
+            5.5px !important;
+    }
+
+
+    /* Dashboard becomes smaller, not taller */
+
+    .mockup-dashboard {
+        transform:
+            scale(.62) !important;
+
+        transform-origin:
+            bottom right !important;
+    }
+
+
+    /* ---------------------------------------------
+       PHONE — MOBILE
+    --------------------------------------------- */
+
+    .hero-phone {
+
+        width:
+            92px !important;
+
+        right:
+            -1px !important;
+
+        bottom:
+            4px !important;
+
+        transform:
+            rotate(4deg) !important;
+
+        animation:
+            none !important;
+
+    }
+
+
+    .hero-phone-frame {
+
+        padding:
+            3px !important;
+
+        border-radius:
+            19px !important;
+
+    }
+
+
+    .hero-phone-screen {
+
+        min-height:
+            190px !important;
+
+        height:
+            190px !important;
+
+        border-radius:
+            16px !important;
+
+    }
+
+
+    .hero-phone-dynamic-island {
+
+        width:
+            43px !important;
+
+        height:
+            11px !important;
+
+        top:
+            5px !important;
+
+    }
+
+
+    .phone-status {
+
+        padding:
+            8px 9px 0 !important;
+
+        font-size:
+            4px !important;
+
+    }
+
+
+    .phone-site-nav {
+
+        padding:
+            20px 9px 0 !important;
+
+    }
+
+
+    .phone-site-nav strong {
+        font-size:
+            8px !important;
+    }
+
+
+    .phone-site-nav span {
+        font-size:
+            4px !important;
+    }
+
+
+    .phone-site-content {
+
+        padding:
+            25px 9px 8px !important;
+
+    }
+
+
+    .phone-site-content small {
+
+        font-size:
+            3.8px !important;
+
+        letter-spacing:
+            .7px !important;
+
+    }
+
+
+    .phone-site-content h3 {
+
+        font-size:
+            12px !important;
+
+        line-height:
+            1.04 !important;
+
+        margin:
+            6px 0 !important;
+
+        max-width:
+            70px !important;
+
+    }
+
+
+    .phone-site-content p {
+
+        font-size:
+            3.8px !important;
+
+        line-height:
+            1.35 !important;
+
+        max-width:
+            72px !important;
+
+        margin-bottom:
+            8px !important;
+
+    }
+
+
+    .phone-live-button {
+
+        padding:
+            4px 6px !important;
+
+        font-size:
+            3.8px !important;
+
+    }
+
+
+    .phone-mini-panel {
+
+        margin-top:
+            8px !important;
+
+        padding:
+            5px !important;
+
+    }
+
+
+    .phone-mini-top {
+
+        font-size:
+            3.8px !important;
+
+    }
+
+
+    .phone-mini-lines {
+        margin-top:
+            5px !important;
+    }
+
+
+    .phone-mini-lines i {
+
+        height:
+            2px !important;
+
+        margin:
+            3px 0 !important;
+
+    }
+
+
+    .phone-mini-stat {
+
+        margin-top:
+            5px !important;
+
+        font-size:
+            3.8px !important;
+
+    }
+
+
+    .phone-bottom-nav {
+
+        left:
+            9px !important;
+
+        right:
+            9px !important;
+
+        bottom:
+            5px !important;
+
+        font-size:
+            5px !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero-visual {
+
+        min-height:
+            350px !important;
+
+        padding-bottom:
+            28px !important;
+
+    }
+
+
+    .laptop {
+        width:
+            96% !important;
+    }
+
+
+    .hero-phone {
+
+        width:
+            78px !important;
+
+        right:
+            0 !important;
+
+        bottom:
+            3px !important;
+
+    }
+
+
+    .hero-phone-screen {
+
+        height:
+            164px !important;
+
+        min-height:
+            164px !important;
+
+    }
+
+
+    .mockup-content h2 {
+
+        font-size:
+            17px !important;
+
+    }
+
+
+    .mockup-dashboard {
+
+        transform:
+            scale(.53) !important;
+
+    }
+
+}
+
+
+
+
