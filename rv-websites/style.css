@@ -6536,4 +6536,649 @@ body::before {
     }
 
 }
-```
+
+/* =========================================================
+   V2.1.1 — FIX HERO HEADING BOX
+   Removes unwanted background box from gradient text
+========================================================= */
+
+.hero h1 span,
+.hero-content h1 span,
+.hero h1 .gradient-text {
+
+    background-color: transparent !important;
+
+    background-image:
+        linear-gradient(
+            100deg,
+            #ffffff 0%,
+            #c4b5fd 35%,
+            #8b5cf6 68%,
+            #67e8f9 100%
+        ) !important;
+
+    background-size:
+        180% auto !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    -webkit-background-clip:
+        text !important;
+
+    background-clip:
+        text !important;
+
+    -webkit-text-fill-color:
+        transparent !important;
+
+    color:
+        transparent !important;
+
+    border:
+        0 !important;
+
+    box-shadow:
+        none !important;
+
+    outline:
+        none !important;
+
+    border-radius:
+        0 !important;
+
+    padding:
+        0 !important;
+
+    margin:
+        0 !important;
+}
+
+
+/* Make sure pseudo-elements cannot create a box */
+
+.hero h1 span::before,
+.hero h1 span::after {
+
+    display:
+        none !important;
+
+    content:
+        none !important;
+
+}
+
+
+/* Keep the animation clean */
+
+.hero h1 span {
+
+    animation:
+        v21Gradient 7s ease-in-out infinite !important;
+
+}
+
+
+
+/* =========================================================
+   V2.1.2 — HERO FLOATING CARDS
+   Coordinated positioning around laptop
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   COMMON CARD
+--------------------------------------------------------- */
+
+.hero-floating-card {
+
+    position: absolute !important;
+
+    z-index: 20;
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 9px;
+
+    width: 165px;
+
+    min-height: 54px;
+
+    padding: 9px 12px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.09) !important;
+
+    border-radius: 12px;
+
+    background:
+        rgba(8, 12, 25, 0.78) !important;
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.30),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.035);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    transform: none;
+
+    pointer-events: none;
+
+}
+
+
+/* ---------------------------------------------------------
+   ICON
+--------------------------------------------------------- */
+
+.hero-card-icon {
+
+    flex:
+        0 0 30px;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(167, 139, 250, 0.16);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(139, 92, 246, 0.08);
+
+    color:
+        #c4b5fd;
+
+    font-size:
+        11px;
+
+}
+
+
+/* ---------------------------------------------------------
+   TEXT
+--------------------------------------------------------- */
+
+.hero-floating-card small {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #64748b;
+
+    font-size:
+        6px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.1px;
+
+}
+
+
+.hero-floating-card strong {
+
+    display:
+        block;
+
+    color:
+        #e2e8f0;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* =========================================================
+   CARD 1
+   FAST & OPTIMIZED
+   Upper-right of laptop
+========================================================= */
+
+.hero-card-performance {
+
+    top:
+        12% !important;
+
+    right:
+        -5px !important;
+
+    left:
+        auto !important;
+
+    animation:
+        v21CardFloatOne 5s ease-in-out infinite !important;
+
+}
+
+
+/* =========================================================
+   CARD 2
+   EVERY SCREEN
+   Lower-left of laptop
+========================================================= */
+
+.hero-card-responsive {
+
+    top:
+        auto !important;
+
+    right:
+        auto !important;
+
+    left:
+        0 !important;
+
+    bottom:
+        15% !important;
+
+    animation:
+        v21CardFloatTwo 5.5s ease-in-out infinite !important;
+
+}
+
+
+/* =========================================================
+   CARD 3
+   READY TO GO LIVE
+   Lower-right of laptop
+========================================================= */
+
+.hero-card-deploy {
+
+    top:
+        auto !important;
+
+    left:
+        auto !important;
+
+    right:
+        7% !important;
+
+    bottom:
+        4% !important;
+
+    animation:
+        v21CardFloatThree 6s ease-in-out infinite !important;
+
+}
+
+
+/* =========================================================
+   DEPLOY STATUS DOT
+========================================================= */
+
+.deploy-status {
+
+    flex:
+        0 0 7px;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        #34d399;
+
+    box-shadow:
+        0 0 14px
+        rgba(52, 211, 153, 0.65);
+
+}
+
+
+/* =========================================================
+   SUBTLE INDIVIDUAL MOTION
+
+   Very small movement — premium, not distracting.
+========================================================= */
+
+@keyframes v21CardFloatOne {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-6px);
+
+    }
+
+}
+
+
+@keyframes v21CardFloatTwo {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(5px);
+
+    }
+
+}
+
+
+@keyframes v21CardFloatThree {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-5px);
+
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP LARGE
+========================================================= */
+
+@media (min-width: 1300px) {
+
+    .hero-card-performance {
+
+        right:
+            0 !important;
+
+        top:
+            10% !important;
+
+    }
+
+
+    .hero-card-responsive {
+
+        left:
+            -10px !important;
+
+        bottom:
+            13% !important;
+
+    }
+
+
+    .hero-card-deploy {
+
+        right:
+            4% !important;
+
+        bottom:
+            2% !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-floating-card {
+
+        width:
+            150px;
+
+        min-height:
+            48px;
+
+        padding:
+            8px 10px;
+
+    }
+
+
+    .hero-card-performance {
+
+        right:
+            3% !important;
+
+        top:
+            8% !important;
+
+    }
+
+
+    .hero-card-responsive {
+
+        left:
+            4% !important;
+
+        bottom:
+            10% !important;
+
+    }
+
+
+    .hero-card-deploy {
+
+        right:
+            7% !important;
+
+        bottom:
+            0 !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+
+   Don't allow the cards to collide with the laptop.
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero-floating-card {
+
+        width:
+            135px;
+
+        min-height:
+            43px;
+
+        padding:
+            7px 9px;
+
+        gap:
+            7px;
+
+        border-radius:
+            10px;
+
+    }
+
+
+    .hero-card-icon {
+
+        width:
+            25px;
+
+        height:
+            25px;
+
+        flex-basis:
+            25px;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .hero-floating-card small {
+
+        font-size:
+            5px;
+
+        letter-spacing:
+            .8px;
+
+    }
+
+
+    .hero-floating-card strong {
+
+        font-size:
+            7px;
+
+    }
+
+
+    /* Fast & Optimized */
+
+    .hero-card-performance {
+
+        top:
+            2% !important;
+
+        right:
+            0 !important;
+
+    }
+
+
+    /* Every Screen */
+
+    .hero-card-responsive {
+
+        left:
+            0 !important;
+
+        bottom:
+            5% !important;
+
+    }
+
+
+    /* Ready To Go Live */
+
+    .hero-card-deploy {
+
+        right:
+            0 !important;
+
+        bottom:
+            -3% !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-floating-card {
+
+        width:
+            118px;
+
+        min-height:
+            39px;
+
+        padding:
+            6px 8px;
+
+    }
+
+
+    .hero-card-icon {
+
+        width:
+            22px;
+
+        height:
+            22px;
+
+        flex-basis:
+            22px;
+
+    }
+
+
+    .hero-floating-card strong {
+
+        font-size:
+            6.5px;
+
+    }
+
+}
+
