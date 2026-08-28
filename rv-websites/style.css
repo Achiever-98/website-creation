@@ -4415,3 +4415,2124 @@ body::before {
     }
 
 }
+
+
+/* =========================================================
+   =========================================================
+
+   RV WEBSITES CREATION
+   V2.1 — PREMIUM HERO OVERRIDES
+
+   Add at the VERY END of style.css
+
+   =========================================================
+   ========================================================= */
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height:
+        calc(100vh - 82px);
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+
+        radial-gradient(
+            circle at 78% 18%,
+            rgba(124,58,237,.12),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 15% 78%,
+            rgba(45,212,191,.055),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #02040b 0%,
+            #050816 48%,
+            #090714 100%
+        );
+
+}
+
+
+/* =========================================================
+   DARKER OVERLAY
+========================================================= */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            transparent 25%,
+            rgba(0,0,0,.28) 100%
+        );
+
+}
+
+
+/* =========================================================
+   NOISE
+========================================================= */
+
+.hero-noise {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    opacity: .12;
+
+    background-image:
+
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+
+    mix-blend-mode:
+        soft-light;
+
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.hero-grid-pattern {
+
+    opacity:
+        .16 !important;
+
+    background-size:
+        58px 58px !important;
+
+    mask-image:
+
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 78%
+        ) !important;
+
+    -webkit-mask-image:
+
+        radial-gradient(
+            ellipse at center,
+            black 0%,
+            transparent 78%
+        ) !important;
+
+}
+
+
+/* =========================================================
+   HERO ORBS
+========================================================= */
+
+.hero-orb-one {
+
+    width:
+        620px !important;
+
+    height:
+        620px !important;
+
+    right:
+        -260px !important;
+
+    top:
+        -240px !important;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(124,58,237,.17),
+            transparent 68%
+        ) !important;
+
+}
+
+
+.hero-orb-two {
+
+    width:
+        500px !important;
+
+    height:
+        500px !important;
+
+    left:
+        -280px !important;
+
+    bottom:
+        -280px !important;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(45,212,191,.07),
+            transparent 68%
+        ) !important;
+
+}
+
+
+.hero-orb-three {
+
+    position:
+        absolute;
+
+    width:
+        320px;
+
+    height:
+        320px;
+
+    right:
+        30%;
+
+    top:
+        35%;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(56,189,248,.045),
+            transparent 70%
+        );
+
+    filter:
+        blur(25px);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.hero-layout {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+
+    border-color:
+        rgba(167,139,250,.22) !important;
+
+    background:
+        rgba(139,92,246,.06) !important;
+
+    color:
+        #c4b5fd !important;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.18) !important;
+
+}
+
+
+.hero-eyebrow .status-dot {
+
+    background:
+        #2dd4bf !important;
+
+    box-shadow:
+
+        0 0 0 5px
+        rgba(45,212,191,.10),
+
+        0 0 18px
+        rgba(45,212,191,.60) !important;
+
+}
+
+
+/* =========================================================
+   HEADLINE
+========================================================= */
+
+.hero h1 {
+
+    max-width:
+        760px;
+
+    font-size:
+        clamp(
+            50px,
+            5.5vw,
+            80px
+        );
+
+    line-height:
+        1.01;
+
+    letter-spacing:
+        -4px;
+
+    font-weight:
+        800;
+
+}
+
+
+.hero h1 span {
+
+    background:
+
+        linear-gradient(
+            100deg,
+            #ffffff 0%,
+            #c4b5fd 28%,
+            #8b5cf6 62%,
+            #67e8f9 100%
+        ) !important;
+
+    background-size:
+        180% auto;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    animation:
+        v21Gradient 7s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-text {
+
+    max-width:
+        630px;
+
+    color:
+        #a8b2c5 !important;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-primary-btn {
+
+    min-height:
+        56px;
+
+    padding:
+        15px 23px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:
+        13px;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            #7c3aed,
+            #8b5cf6,
+            #06b6d4
+        ) !important;
+
+    box-shadow:
+
+        0 15px 45px
+        rgba(124,58,237,.24) !important;
+
+    overflow:
+        hidden;
+
+}
+
+
+.hero-primary-btn:hover {
+
+    box-shadow:
+
+        0 20px 55px
+        rgba(124,58,237,.38) !important;
+
+}
+
+
+.hero-secondary-btn {
+
+    min-height:
+        56px;
+
+    padding:
+        15px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13) !important;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+}
+
+
+.hero-secondary-btn:hover {
+
+    border-color:
+        rgba(167,139,250,.35) !important;
+
+    background:
+        rgba(255,255,255,.065);
+
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.btn-arrow {
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.btn:hover .btn-arrow {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.hero-trust-v21 {
+
+    gap:
+        12px 20px;
+
+}
+
+
+.hero-trust-v21 span {
+
+    color:
+        #94a3b8;
+
+}
+
+
+.hero-trust-v21 i {
+
+    width:
+        22px;
+
+    height:
+        22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.045);
+
+    color:
+        #a78bfa;
+
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.hero-price-note {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-top:
+        18px;
+
+    color:
+        #64748b;
+
+    font-size:
+        10px;
+
+}
+
+
+.hero-price-note strong {
+
+    color:
+        #c4b5fd;
+
+    font-weight:
+        800;
+
+}
+
+
+.price-status {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        #2dd4bf;
+
+    box-shadow:
+        0 0 12px
+        rgba(45,212,191,.65);
+
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+
+    min-height:
+        570px;
+
+}
+
+
+.hero-glow {
+
+    width:
+        560px !important;
+
+    height:
+        560px !important;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(139,92,246,.17),
+            rgba(45,212,191,.045) 42%,
+            transparent 70%
+        ) !important;
+
+    filter:
+        blur(35px) !important;
+
+}
+
+
+/* =========================================================
+   DECORATIVE RINGS
+========================================================= */
+
+.hero-ring {
+
+    position:
+        absolute;
+
+    border:
+        1px solid
+        rgba(167,139,250,.07);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+}
+
+
+.hero-ring-one {
+
+    width:
+        560px;
+
+    height:
+        560px;
+
+    animation:
+        v21Ring 25s linear infinite;
+
+}
+
+
+.hero-ring-two {
+
+    width:
+        430px;
+
+    height:
+        430px;
+
+    border-color:
+        rgba(45,212,191,.06);
+
+    animation:
+        v21Ring 18s linear infinite reverse;
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+.laptop {
+
+    width:
+        min(620px, 100%);
+
+    filter:
+        drop-shadow(
+            0 40px 60px
+            rgba(0,0,0,.52)
+        );
+
+}
+
+
+/* =========================================================
+   LAPTOP SCREEN
+========================================================= */
+
+.laptop-screen {
+
+    border:
+        8px solid
+        #20283a !important;
+
+    border-bottom-width:
+        11px !important;
+
+    background:
+        #080d1b !important;
+
+    box-shadow:
+
+        0 45px 100px
+        rgba(0,0,0,.60),
+
+        0 0 0 1px
+        rgba(255,255,255,.06) !important;
+
+}
+
+
+/* =========================================================
+   BROWSER BAR
+========================================================= */
+
+.browser-bar {
+
+    height:
+        30px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        0 12px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.06);
+
+    background:
+        #111729;
+
+}
+
+
+.browser-dots {
+
+    display:
+        flex;
+
+    gap:
+        5px;
+
+}
+
+
+.browser-dots span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.18);
+
+}
+
+
+.browser-address {
+
+    min-width:
+        170px;
+
+    padding:
+        4px 13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    border-radius:
+        6px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:
+        #64748b;
+
+    text-align:
+        center;
+
+    font-size:
+        7px;
+
+}
+
+
+.browser-actions {
+
+    display:
+        flex;
+
+    gap:
+        5px;
+
+}
+
+
+.browser-actions span {
+
+    width:
+        12px;
+
+    height:
+        4px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   MOCKUP NAV
+========================================================= */
+
+.mockup-nav {
+
+    margin-bottom:
+        25px !important;
+
+}
+
+
+.mockup-nav strong span {
+
+    color:
+        #8b5cf6;
+
+}
+
+
+.mockup-links {
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    margin-left:
+        auto;
+
+    margin-right:
+        15px;
+
+    color:
+        #64748b;
+
+    font-size:
+        7px;
+
+}
+
+
+.mockup-nav-button {
+
+    padding:
+        5px 9px;
+
+    border:
+        1px solid
+        rgba(167,139,250,.20);
+
+    border-radius:
+        5px;
+
+    color:
+        #c4b5fd;
+
+    font-size:
+        6px;
+
+}
+
+
+/* =========================================================
+   MOCKUP CONTENT
+========================================================= */
+
+.mockup-content {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items:
+        center;
+
+    min-height:
+        280px;
+
+}
+
+
+.mockup-copy {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+}
+
+
+.mockup-copy small {
+
+    color:
+        #2dd4bf;
+
+    font-size:
+        7px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.mockup-copy h2 {
+
+    font-size:
+        28px;
+
+    line-height:
+        1.05;
+
+}
+
+
+.mockup-copy h2 span {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #a78bfa,
+            #67e8f9
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+}
+
+
+.mockup-copy p {
+
+    max-width:
+        190px;
+
+    color:
+        #718096;
+
+    font-size:
+        7px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.mockup-dashboard {
+
+    position:
+        relative;
+
+    min-height:
+        250px;
+
+}
+
+
+.dashboard-orb {
+
+    position:
+        absolute;
+
+    width:
+        210px;
+
+    height:
+        210px;
+
+    right:
+        -25px;
+
+    top:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(139,92,246,.30),
+            rgba(45,212,191,.06) 45%,
+            transparent 70%
+        );
+
+    filter:
+        blur(5px);
+
+}
+
+
+.dashboard-card {
+
+    position:
+        absolute;
+
+    top:
+        30px;
+
+    right:
+        15px;
+
+    width:
+        165px;
+
+    padding:
+        13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(15,23,42,.78);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.30);
+
+    backdrop-filter:
+        blur(15px);
+
+    transform:
+        rotate(4deg);
+
+}
+
+
+.dashboard-top {
+
+    display:
+        flex;
+
+    gap:
+        4px;
+
+}
+
+
+.dashboard-top span {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.20);
+
+}
+
+
+.dashboard-chart {
+
+    height:
+        55px;
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    gap:
+        5px;
+
+    margin:
+        10px 0;
+
+}
+
+
+.dashboard-chart i {
+
+    flex:
+        1;
+
+    border-radius:
+        4px 4px 1px 1px;
+
+    background:
+
+        linear-gradient(
+            to top,
+            #7c3aed,
+            #67e8f9
+        );
+
+}
+
+
+.dashboard-chart i:nth-child(1) {
+    height: 25%;
+}
+
+.dashboard-chart i:nth-child(2) {
+    height: 45%;
+}
+
+.dashboard-chart i:nth-child(3) {
+    height: 35%;
+}
+
+.dashboard-chart i:nth-child(4) {
+    height: 70%;
+}
+
+.dashboard-chart i:nth-child(5) {
+    height: 58%;
+}
+
+.dashboard-chart i:nth-child(6) {
+    height: 90%;
+}
+
+
+.dashboard-card small,
+.dashboard-card strong {
+
+    display:
+        block;
+
+}
+
+
+.dashboard-card small {
+
+    color:
+        #64748b;
+
+    font-size:
+        6px;
+
+}
+
+
+.dashboard-card strong {
+
+    margin-top:
+        2px;
+
+    color:
+        #a7f3d0;
+
+    font-size:
+        9px;
+
+}
+
+
+/* =========================================================
+   DEPLOYMENT CARD
+========================================================= */
+
+.dashboard-status {
+
+    position:
+        absolute;
+
+    right:
+        65px;
+
+    bottom:
+        20px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(15,23,42,.78);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.25);
+
+    transform:
+        rotate(-3deg);
+
+}
+
+
+.dashboard-status > span {
+
+    width:
+        21px;
+
+    height:
+        21px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(45,212,191,.12);
+
+    color:
+        #5eead4;
+
+    font-size:
+        8px;
+
+}
+
+
+.dashboard-status strong,
+.dashboard-status small {
+
+    display:
+        block;
+
+}
+
+
+.dashboard-status strong {
+
+    color:
+        #e2e8f0;
+
+    font-size:
+        7px;
+
+}
+
+
+.dashboard-status small {
+
+    color:
+        #64748b;
+
+    font-size:
+        6px;
+
+}
+
+
+/* =========================================================
+   MOCKUP BOTTOM
+========================================================= */
+
+.mockup-bottom-bar {
+
+    position:
+        absolute;
+
+    left:
+        25px;
+
+    right:
+        25px;
+
+    bottom:
+        12px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    color:
+        #475569;
+
+    font-size:
+        6px;
+
+}
+
+
+.mockup-bottom-bar span:first-child {
+
+    color:
+        #5eead4;
+
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.hero-floating-card {
+
+    position:
+        absolute;
+
+    z-index:
+        10;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(7,11,23,.72);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0,0,0,.32);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    animation:
+        v21Float 5s ease-in-out infinite;
+
+}
+
+
+.hero-floating-card small,
+.hero-floating-card strong {
+
+    display:
+        block;
+
+}
+
+
+.hero-floating-card small {
+
+    color:
+        #64748b;
+
+    font-size:
+        6px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.hero-floating-card strong {
+
+    margin-top:
+        2px;
+
+    color:
+        #e2e8f0;
+
+    font-size:
+        8px;
+
+}
+
+
+.hero-card-icon {
+
+    width:
+        29px;
+
+    height:
+        29px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(139,92,246,.20);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(139,92,246,.10);
+
+    color:
+        #c4b5fd;
+
+    font-size:
+        11px;
+
+}
+
+
+.hero-card-performance {
+
+    left:
+        -15px;
+
+    top:
+        12%;
+
+}
+
+
+.hero-card-responsive {
+
+    right:
+        -20px;
+
+    top:
+        49%;
+
+    animation-delay:
+        -2s;
+
+}
+
+
+.hero-card-deploy {
+
+    left:
+        8%;
+
+    bottom:
+        9%;
+
+    animation-delay:
+        -3.5s;
+
+}
+
+
+.deploy-status {
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    background:
+        #34d399;
+
+    box-shadow:
+        0 0 15px
+        rgba(52,211,153,.65);
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.hero-scroll-indicator {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        25px;
+
+    z-index:
+        10;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    transform:
+        translateX(-50%);
+
+    color:
+        #475569;
+
+    font-size:
+        7px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.hero-scroll-indicator i {
+
+    width:
+        1px;
+
+    height:
+        27px;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+.hero-scroll-indicator i::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        1px;
+
+    height:
+        50%;
+
+    background:
+        #a78bfa;
+
+    animation:
+        v21Scroll 2s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes v21Gradient {
+
+    0%,
+    100% {
+        background-position:
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            100% 50%;
+    }
+
+}
+
+
+@keyframes v21Ring {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes v21Float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-9px);
+    }
+
+}
+
+
+@keyframes v21Scroll {
+
+    0% {
+        transform:
+            translateY(-100%);
+    }
+
+    100% {
+        transform:
+            translateY(220%);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-layout {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+        gap:
+            35px;
+
+    }
+
+
+    .hero-content {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+    }
+
+
+    .hero-text {
+
+        max-width:
+            680px;
+
+    }
+
+
+    .hero-actions {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .hero-trust {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .hero-price-note {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .hero-visual {
+
+        min-height:
+            520px;
+
+    }
+
+
+    .hero-card-performance {
+
+        left:
+            2%;
+
+    }
+
+
+    .hero-card-responsive {
+
+        right:
+            2%;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+
+        min-height:
+            auto;
+
+        padding:
+            115px 0
+            70px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                40px,
+                10.5vw,
+                52px
+            );
+
+        letter-spacing:
+            -2.4px;
+
+    }
+
+
+    .hero-text {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .hero-actions {
+
+        width:
+            100%;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+    }
+
+
+    .hero-actions .btn {
+
+        width:
+            min(100%, 330px);
+
+    }
+
+
+    .hero-trust {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            13px;
+
+        width:
+            100%;
+
+        text-align:
+            left;
+
+    }
+
+
+    .hero-trust span {
+
+        justify-content:
+            flex-start;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .hero-visual {
+
+        min-height:
+            360px;
+
+    }
+
+
+    .hero-glow {
+
+        width:
+            350px !important;
+
+        height:
+            350px !important;
+
+    }
+
+
+    .hero-ring-one {
+
+        width:
+            350px;
+
+        height:
+            350px;
+
+    }
+
+
+    .hero-ring-two {
+
+        width:
+            280px;
+
+        height:
+            280px;
+
+    }
+
+
+    .laptop {
+
+        width:
+            96%;
+
+    }
+
+
+    .laptop-screen {
+
+        border-width:
+            5px !important;
+
+        border-bottom-width:
+            7px !important;
+
+    }
+
+
+    .browser-bar {
+
+        height:
+            20px;
+
+        padding:
+            0 7px;
+
+    }
+
+
+    .browser-address {
+
+        min-width:
+            95px;
+
+        padding:
+            2px 6px;
+
+        font-size:
+            5px;
+
+    }
+
+
+    .browser-actions {
+
+        display:
+            none;
+
+    }
+
+
+    .mockup-nav {
+
+        margin-bottom:
+            10px !important;
+
+    }
+
+
+    .mockup-links {
+
+        display:
+            none;
+
+    }
+
+
+    .mockup-nav-button {
+
+        margin-left:
+            auto;
+
+    }
+
+
+    .mockup-content {
+
+        min-height:
+            180px;
+
+        padding:
+            0 10px;
+
+    }
+
+
+    .mockup-copy h2 {
+
+        font-size:
+            19px;
+
+    }
+
+
+    .mockup-copy p {
+
+        max-width:
+            120px;
+
+        font-size:
+            5px;
+
+    }
+
+
+    .dashboard-card {
+
+        width:
+            105px;
+
+        right:
+            0;
+
+        top:
+            15px;
+
+        padding:
+            8px;
+
+    }
+
+
+    .dashboard-chart {
+
+        height:
+            35px;
+
+    }
+
+
+    .dashboard-status {
+
+        right:
+            15px;
+
+        bottom:
+            8px;
+
+        padding:
+            6px;
+
+    }
+
+
+    .hero-floating-card {
+
+        transform:
+            scale(.80);
+
+    }
+
+
+    .hero-card-performance {
+
+        left:
+            -15px;
+
+    }
+
+
+    .hero-card-responsive {
+
+        right:
+            -15px;
+
+    }
+
+
+    .hero-card-deploy {
+
+        left:
+            3%;
+
+        bottom:
+            0;
+
+    }
+
+
+    .hero-scroll-indicator {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero *,
+    .hero *::before,
+    .hero *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}
+```
