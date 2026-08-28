@@ -9318,3 +9318,605 @@ body::before {
 
 
 
+/* =========================================================
+   V2.1.5 — DEVICE CONTENT & PROPORTION REFINEMENT
+========================================================= */
+
+
+/* =========================================================
+   MACBOOK
+========================================================= */
+
+.laptop {
+    width: min(700px, 100%) !important;
+}
+
+
+/* Give the actual website more usable screen space */
+
+.laptop-screen {
+    padding: 15px 18px !important;
+}
+
+
+/* Navigation */
+
+.mockup-nav {
+    margin-bottom: 14px !important;
+}
+
+
+/* Main website hero */
+
+.mockup-content {
+    max-width: 430px !important;
+}
+
+
+/* Main headline */
+
+.mockup-content h2 {
+    font-size: clamp(30px, 3.7vw, 45px) !important;
+
+    line-height: 1.02 !important;
+
+    letter-spacing: -1.8px !important;
+
+    margin:
+        5px 0 9px !important;
+}
+
+
+/* Supporting text */
+
+.mockup-content p {
+    max-width: 260px !important;
+
+    font-size: 8px !important;
+
+    line-height: 1.45 !important;
+
+    margin-bottom: 10px !important;
+}
+
+
+/* CTA */
+
+.mockup-button {
+    font-size: 7px !important;
+
+    padding:
+        7px 12px !important;
+}
+
+
+/* Dashboard should support the hero, not dominate it */
+
+.mockup-dashboard {
+    transform:
+        scale(.72) !important;
+
+    transform-origin:
+        bottom right !important;
+}
+
+
+/* =========================================================
+   PHONE — DESKTOP
+========================================================= */
+
+.hero-phone {
+
+    width:
+        118px !important;
+
+    right:
+        1% !important;
+
+    bottom:
+        0 !important;
+
+    transform:
+        rotate(3deg) !important;
+
+}
+
+
+/* Shorter physical screen */
+
+.hero-phone-screen {
+
+    height:
+        245px !important;
+
+    min-height:
+        245px !important;
+
+}
+
+
+/* Phone navigation */
+
+.phone-site-nav {
+
+    padding:
+        20px 10px 0 !important;
+
+}
+
+
+/* Phone content */
+
+.phone-site-content {
+
+    padding:
+        28px 10px 10px !important;
+
+}
+
+
+/* Make the phone headline readable */
+
+.phone-site-content h3 {
+
+    font-size:
+        16px !important;
+
+    line-height:
+        1.04 !important;
+
+    max-width:
+        95px !important;
+
+    margin:
+        7px 0 !important;
+
+}
+
+
+.phone-site-content p {
+
+    font-size:
+        4.5px !important;
+
+    max-width:
+        95px !important;
+
+}
+
+
+/* Phone CTA */
+
+.phone-live-button {
+
+    font-size:
+        4.5px !important;
+
+    padding:
+        5px 7px !important;
+
+}
+
+
+/* Hide unnecessary tiny dashboard content */
+
+.phone-mini-panel {
+
+    display:
+        none !important;
+
+}
+
+
+/* =========================================================
+   MOBILE — PRIORITIZE READABILITY
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* ---------------------------------------------
+       HERO AREA
+    --------------------------------------------- */
+
+    .hero-visual {
+
+        min-height:
+            355px !important;
+
+        padding:
+            0 4px 28px !important;
+
+    }
+
+
+    /* ---------------------------------------------
+       MACBOOK
+    --------------------------------------------- */
+
+    .laptop {
+
+        width:
+            96% !important;
+
+    }
+
+
+    .laptop-screen {
+
+        padding:
+            9px 10px !important;
+
+    }
+
+
+    .mockup-nav {
+
+        margin-bottom:
+            6px !important;
+
+    }
+
+
+    .mockup-content {
+
+        max-width:
+            62% !important;
+
+    }
+
+
+    .mockup-content small {
+
+        font-size:
+            4px !important;
+
+        letter-spacing:
+            .7px !important;
+
+    }
+
+
+    .mockup-content h2 {
+
+        font-size:
+            clamp(
+                15px,
+                5vw,
+                22px
+            ) !important;
+
+        line-height:
+            1.02 !important;
+
+        letter-spacing:
+            -.8px !important;
+
+        margin:
+            4px 0 5px !important;
+
+    }
+
+
+    .mockup-content p {
+
+        max-width:
+            105px !important;
+
+        font-size:
+            4.2px !important;
+
+        line-height:
+            1.35 !important;
+
+        margin:
+            3px 0 6px !important;
+
+    }
+
+
+    .mockup-button {
+
+        font-size:
+            4.5px !important;
+
+        padding:
+            4px 7px !important;
+
+    }
+
+
+    /* ---------------------------------------------
+       DASHBOARD
+    --------------------------------------------- */
+
+    .mockup-dashboard {
+
+        transform:
+            scale(.46) !important;
+
+        transform-origin:
+            bottom right !important;
+
+    }
+
+
+    /* ---------------------------------------------
+       IPHONE
+    --------------------------------------------- */
+
+    .hero-phone {
+
+        width:
+            88px !important;
+
+        right:
+            0 !important;
+
+        bottom:
+            3px !important;
+
+        transform:
+            rotate(3deg) !important;
+
+    }
+
+
+    .hero-phone-frame {
+
+        padding:
+            3px !important;
+
+        border-radius:
+            19px !important;
+
+    }
+
+
+    .hero-phone-screen {
+
+        height:
+            175px !important;
+
+        min-height:
+            175px !important;
+
+        border-radius:
+            16px !important;
+
+    }
+
+
+    /* Dynamic island */
+
+    .hero-phone-dynamic-island {
+
+        width:
+            40px !important;
+
+        height:
+            10px !important;
+
+        top:
+            5px !important;
+
+    }
+
+
+    /* Status */
+
+    .phone-status {
+
+        padding:
+            7px 8px 0 !important;
+
+        font-size:
+            3.8px !important;
+
+    }
+
+
+    /* Phone logo */
+
+    .phone-site-nav {
+
+        padding:
+            18px 8px 0 !important;
+
+    }
+
+
+    .phone-site-nav strong {
+
+        font-size:
+            8px !important;
+
+    }
+
+
+    .phone-site-nav span {
+
+        font-size:
+            3.5px !important;
+
+    }
+
+
+    /* ---------------------------------------------
+       IMPORTANT:
+       Make phone content larger and simpler
+    --------------------------------------------- */
+
+    .phone-site-content {
+
+        padding:
+            25px 8px 8px !important;
+
+    }
+
+
+    .phone-site-content small {
+
+        font-size:
+            3.5px !important;
+
+        letter-spacing:
+            .6px !important;
+
+    }
+
+
+    .phone-site-content h3 {
+
+        font-size:
+            13px !important;
+
+        line-height:
+            1.02 !important;
+
+        max-width:
+            72px !important;
+
+        margin:
+            6px 0 !important;
+
+    }
+
+
+    .phone-site-content p {
+
+        font-size:
+            3.8px !important;
+
+        max-width:
+            72px !important;
+
+        line-height:
+            1.35 !important;
+
+        margin-bottom:
+            8px !important;
+
+    }
+
+
+    .phone-live-button {
+
+        font-size:
+            3.8px !important;
+
+        padding:
+            4px 6px !important;
+
+    }
+
+
+    /* Don't show the tiny panel */
+
+    .phone-mini-panel {
+
+        display:
+            none !important;
+
+    }
+
+
+    /* Bottom navigation */
+
+    .phone-bottom-nav {
+
+        left:
+            8px !important;
+
+        right:
+            8px !important;
+
+        bottom:
+            5px !important;
+
+        font-size:
+            5px !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero-visual {
+
+        min-height:
+            325px !important;
+
+    }
+
+
+    .laptop {
+
+        width:
+            97% !important;
+
+    }
+
+
+    .hero-phone {
+
+        width:
+            75px !important;
+
+        right:
+            0 !important;
+
+        bottom:
+            1px !important;
+
+    }
+
+
+    .hero-phone-screen {
+
+        height:
+            150px !important;
+
+        min-height:
+            150px !important;
+
+    }
+
+
+    .mockup-content {
+
+        max-width:
+            64% !important;
+
+    }
+
+
+    .mockup-content h2 {
+
+        font-size:
+            14px !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.hero,
+.hero-visual {
+
+    max-width:
+        100vw;
+
+}
+
+
