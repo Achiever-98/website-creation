@@ -6188,7 +6188,7 @@ p {
 @media (min-width: 769px) {
 
     .hero-layout {
-        padding-top: 32px !important;
+        padding-top: 80px !important;
         padding-bottom: 65px !important;
     }
 
@@ -6203,7 +6203,7 @@ p {
 @media (max-width: 768px) {
 
     .hero-layout {
-        padding-top: 26px !important;
+        padding-top: 86px !important;
     }
 
     .hero {
@@ -6339,7 +6339,7 @@ p {
 
         z-index: 5 !important;
 
-        width: 125px !important;
+        width: 140px !important;
 
         right: 0 !important;
 
@@ -6347,7 +6347,7 @@ p {
            Move phone UP substantially.
         */
 
-        bottom: 105px !important;
+        bottom: 140px !important;
 
         transform:
             rotate(3deg) !important;
