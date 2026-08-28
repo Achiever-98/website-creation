@@ -6492,38 +6492,58 @@ p {
 }
 
 /* =========================================================
-   RV WEBSITES — ABOVE LAPTOP
+   RV WEBSITES — FLOATING ABOVE LAPTOP
+   Does NOT affect laptop size or layout
 ========================================================= */
 
-.laptop-brand {
-    position: relative;
-    z-index: 20;
+.hero-visual {
+    position: relative !important;
+}
+
+
+/* Label floats above the laptop */
+.hero-visual .laptop-brand {
+
+    position: absolute !important;
+
+    z-index: 30;
+
+    top: -32px;
+
+    left: 24px;
 
     display: flex;
+
     align-items: center;
 
-    margin-bottom: 12px;
-    padding-left: 24px;
+    width: auto;
 
-    font-family:
-        "Manrope",
-        sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "Manrope", sans-serif;
 
     font-size: 12px;
+
     font-weight: 800;
 
     letter-spacing: 2px;
+
     line-height: 1;
 
     color: rgba(255, 255, 255, 0.92);
 
     text-transform: uppercase;
+
+    white-space: nowrap;
+
+    pointer-events: none;
 }
 
 
-/* Small premium indicator */
+/* Premium dot */
+.hero-visual .laptop-brand::before {
 
-.laptop-brand::before {
     content: "";
 
     width: 6px;
@@ -6531,44 +6551,77 @@ p {
 
     margin-right: 8px;
 
+    flex: 0 0 6px;
+
     border-radius: 50%;
 
     background: #a78bfa;
 
     box-shadow:
         0 0 10px
-        rgba(167, 139, 250, 0.65);
+        rgba(167, 139, 250, 0.7);
 }
 
 
-/* Desktop */
+/* ---------------------------------------------------------
+   DESKTOP
+--------------------------------------------------------- */
 
-@media (min-width: 769px) {
+@media (min-width: 1101px) {
 
-    .laptop-brand {
-        margin-bottom: 14px;
-        padding-left: 24px;
+    .hero-visual .laptop-brand {
+
+        top: -34px;
+
+        left: 28px;
+
+        font-size: 13px;
     }
 }
 
 
-/* Mobile */
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    .hero-visual .laptop-brand {
+
+        top: -30px;
+
+        left: 18px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
 
 @media (max-width: 768px) {
 
-    .laptop-brand {
-        justify-content: center;
+    .hero-visual .laptop-brand {
 
-        margin-bottom: 10px;
-        padding-left: 0;
+        top: -27px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
 
         font-size: 10px;
+
         letter-spacing: 1.7px;
     }
 
-    .laptop-brand::before {
+    .hero-visual .laptop-brand::before {
+
         width: 5px;
         height: 5px;
+
+        flex-basis: 5px;
 
         margin-right: 7px;
     }
