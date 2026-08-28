@@ -6169,3 +6169,324 @@ p {
     }
 
 }
+
+
+
+/* =========================================================
+   HERO FINAL POSITIONING FIX
+   - Reduce navbar -> hero gap
+   - Separate RV Websites from tech pill
+   - Move iPhone beside MacBook
+   - Preserve mobile responsiveness
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. REDUCE EMPTY SPACE AFTER NAVIGATION
+--------------------------------------------------------- */
+
+@media (min-width: 769px) {
+
+    .hero-layout {
+        padding-top: 28px !important;
+        padding-bottom: 65px !important;
+    }
+
+    .hero {
+        padding-top: 0 !important;
+    }
+}
+
+
+/* Mobile navbar -> hero spacing */
+
+@media (max-width: 768px) {
+
+    .hero-layout {
+        padding-top: 22px !important;
+    }
+
+    .hero {
+        padding-top: 0 !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   2. RV WEBSITES MUST BE ITS OWN LINE
+--------------------------------------------------------- */
+
+.hero-content .hero-brand-heading {
+
+    display: flex !important;
+
+    width: 100% !important;
+
+    align-items: center;
+
+    margin-bottom: 12px !important;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   3. TECHNOLOGY PILL MUST BE ON ITS OWN LINE
+--------------------------------------------------------- */
+
+.hero-content .hero-tech-pill {
+
+    display: inline-flex !important;
+
+    width: fit-content !important;
+
+    max-width: 100%;
+
+    margin-top: 0 !important;
+
+    margin-bottom: 20px !important;
+
+    clear: both;
+}
+
+
+/* ---------------------------------------------------------
+   4. PREVENT BRAND + TECH FROM COLLAPSING TOGETHER
+--------------------------------------------------------- */
+
+.hero-content .hero-brand-heading + .hero-tech-pill {
+
+    position: relative;
+
+    display: flex !important;
+
+    margin-left: 0 !important;
+}
+
+
+/* Desktop left alignment */
+
+@media (min-width: 769px) {
+
+    .hero-content .hero-brand-heading {
+        justify-content: flex-start;
+    }
+
+    .hero-content .hero-tech-pill {
+        justify-content: center;
+    }
+}
+
+
+/* Mobile center alignment */
+
+@media (max-width: 768px) {
+
+    .hero-content .hero-brand-heading {
+        justify-content: center;
+    }
+
+    .hero-content .hero-tech-pill {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   5. LAPTOP + IPHONE COMPOSITION
+--------------------------------------------------------- */
+
+/*
+   The visual container becomes the positioning reference.
+*/
+
+@media (min-width: 769px) {
+
+    .hero-visual {
+
+        position: relative !important;
+
+        overflow: visible !important;
+    }
+
+
+    /*
+       Laptop remains the primary visual.
+    */
+
+    .hero-visual .laptop {
+
+        position: relative !important;
+
+        z-index: 2;
+
+        margin-left: auto !important;
+
+        margin-right: 25px !important;
+    }
+
+
+    /*
+       IMPORTANT:
+       Phone is positioned relative to the hero visual,
+       not underneath the laptop.
+    */
+
+    .hero-visual .hero-phone {
+
+        position: absolute !important;
+
+        z-index: 5 !important;
+
+        width: 125px !important;
+
+        right: 0 !important;
+
+        /*
+           Move phone UP substantially.
+        */
+
+        bottom: 105px !important;
+
+        transform:
+            rotate(3deg) !important;
+
+        margin: 0 !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   6. LARGE DESKTOP IPHONE
+--------------------------------------------------------- */
+
+@media (min-width: 1400px) {
+
+    .hero-visual .hero-phone {
+
+        width: 135px !important;
+
+        right: -5px !important;
+
+        bottom: 110px !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   7. TABLET
+--------------------------------------------------------- */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    .hero-visual .hero-phone {
+
+        width: 105px !important;
+
+        right: 0 !important;
+
+        bottom: 90px !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   8. MOBILE DEVICE COMPOSITION
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .hero-visual {
+
+        position: relative !important;
+
+        min-height: 350px !important;
+
+        overflow: visible !important;
+    }
+
+
+    .hero-visual .laptop {
+
+        position: relative !important;
+
+        z-index: 2 !important;
+
+        width: 96% !important;
+
+        margin-left: auto !important;
+
+        margin-right: auto !important;
+    }
+
+
+    /*
+       Smaller phone, positioned at the laptop's
+       lower-right corner.
+    */
+
+    .hero-visual .hero-phone {
+
+        position: absolute !important;
+
+        z-index: 5 !important;
+
+        width: 76px !important;
+
+        right: 0 !important;
+
+        bottom: 28px !important;
+
+        transform:
+            rotate(4deg) !important;
+
+        margin: 0 !important;
+
+        animation: none !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   9. SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .hero-visual {
+
+        min-height: 315px !important;
+    }
+
+    .hero-visual .hero-phone {
+
+        width: 69px !important;
+
+        right: -1px !important;
+
+        bottom: 23px !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   10. VERY SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+    .hero-visual {
+
+        min-height: 295px !important;
+    }
+
+    .hero-visual .hero-phone {
+
+        width: 63px !important;
+
+        right: 0 !important;
+
+        bottom: 20px !important;
+    }
+}
