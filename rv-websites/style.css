@@ -6188,7 +6188,7 @@ p {
 @media (min-width: 769px) {
 
     .hero-layout {
-        padding-top: 28px !important;
+        padding-top: 32px !important;
         padding-bottom: 65px !important;
     }
 
@@ -6203,7 +6203,7 @@ p {
 @media (max-width: 768px) {
 
     .hero-layout {
-        padding-top: 22px !important;
+        padding-top: 26px !important;
     }
 
     .hero {
