@@ -2766,3 +2766,370 @@ footer {
         transform: none;
     }
 }
+
+
+/* =========================================================
+   MOBILE RESPONSIVE FIX
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- HEADER ---------- */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar {
+        min-height: 70px;
+        gap: 15px;
+    }
+
+    .logo-mark {
+        width: 43px;
+        height: 43px;
+        border-radius: 13px;
+        font-size: 17px;
+    }
+
+    .logo-copy strong {
+        font-size: 15px;
+    }
+
+    .logo-copy small {
+        font-size: 8px;
+        letter-spacing: 2.5px;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+        z-index: 1002;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 18px;
+        gap: 6px;
+
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 18px 40px rgba(18, 23, 48, 0.14);
+
+        transform: translateY(-120%);
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            transform .3s ease,
+            opacity .3s ease,
+            visibility .3s ease;
+
+        z-index: 1001;
+    }
+
+    .main-nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 13px 15px;
+        text-align: left;
+    }
+
+    .nav-cta {
+        margin: 5px 0 0;
+        text-align: center;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0 55px;
+    }
+
+    .hero-layout {
+        width: min(92%, 600px);
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 55px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .eyebrow {
+        max-width: 100%;
+        justify-content: center;
+
+        font-size: 9px;
+        padding: 8px 11px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+
+        font-size: clamp(38px, 10vw, 52px);
+        line-height: 1.02;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 22px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        margin: 0 auto 25px;
+    }
+
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .hero-actions {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 10px;
+
+        margin-bottom: 24px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 50px;
+
+        padding: 12px 16px;
+
+        font-size: 12px;
+    }
+
+
+    /* ---------- TRUST ITEMS ---------- */
+
+    .hero-trust {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 9px;
+
+        width: 100%;
+    }
+
+    .hero-trust span {
+        justify-content: center;
+        font-size: 10px;
+    }
+
+
+    /* ---------- HERO VISUAL ---------- */
+
+    .hero-visual {
+        width: 100%;
+        min-height: 360px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .laptop {
+        width: 92%;
+        max-width: 430px;
+
+        transform: scale(.90);
+        transform-origin: center center;
+    }
+
+    .phone {
+        width: 115px;
+
+        right: 2%;
+        bottom: 0;
+    }
+
+    .phone-screen {
+        min-height: 230px;
+        padding: 20px 9px 10px;
+    }
+
+    .phone-screen h3 {
+        font-size: 17px;
+    }
+
+
+    /* ---------- HERO DECORATION ---------- */
+
+    .hero-orb-one {
+        width: 250px;
+        height: 250px;
+
+        right: -120px;
+        top: 80px;
+    }
+
+    .hero-orb-two {
+        width: 230px;
+        height: 230px;
+
+        left: -120px;
+        bottom: -80px;
+    }
+
+    .hero-grid-pattern {
+        background-size: 38px 38px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .logo-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .logo-copy strong {
+        font-size: 14px;
+    }
+
+    .logo-copy small {
+        font-size: 7px;
+    }
+
+    .main-nav {
+        top: 64px;
+    }
+
+    .hero {
+        padding: 55px 0 45px;
+    }
+
+    .hero-layout {
+        gap: 42px;
+    }
+
+    .eyebrow {
+        font-size: 8px;
+        letter-spacing: .3px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 10.5vw, 44px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-trust {
+        gap: 7px;
+    }
+
+    .hero-trust span {
+        font-size: 9px;
+    }
+
+    .hero-visual {
+        min-height: 310px;
+    }
+
+    .laptop {
+        width: 100%;
+        transform: scale(.78);
+    }
+
+    .phone {
+        width: 100px;
+        right: 0;
+    }
+
+    .phone-screen {
+        min-height: 205px;
+        padding: 18px 8px 9px;
+    }
+
+    .phone-screen h3 {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+    .hero-visual {
+        min-height: 275px;
+    }
+
+    .laptop {
+        transform: scale(.68);
+    }
+
+    .phone {
+        width: 88px;
+    }
+
+    .hero-trust span {
+        font-size: 8px;
+    }
+}
