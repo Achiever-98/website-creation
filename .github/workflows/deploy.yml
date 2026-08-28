@@ -4,7 +4,7 @@ name: Deploy RV Website to GitHub Pages
 on:
   push:
     branches:
-      - feature/dev-v2.1
+      - feature/dev-release
 
   workflow_dispatch:
 
