@@ -1038,3 +1038,398 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 });
+
+/* =========================================================
+   PREMIUM 2026 INTERACTIONS
+   Add at the VERY END of script.js
+   ========================================================= */
+
+(function () {
+
+    "use strict";
+
+
+    /* =====================================================
+       PREMIUM CURSOR LIGHT
+       Desktop only
+       ===================================================== */
+
+    const cursorGlow =
+        document.querySelector(".cursor-glow");
+
+    if (
+        cursorGlow &&
+        window.matchMedia("(hover: hover) and (pointer: fine)").matches
+    ) {
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let glowX = 0;
+        let glowY = 0;
+
+
+        window.addEventListener(
+            "mousemove",
+            function (event) {
+
+                mouseX = event.clientX;
+                mouseY = event.clientY;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        function animateCursor() {
+
+            glowX +=
+                (mouseX - glowX) * 0.12;
+
+            glowY +=
+                (mouseY - glowY) * 0.12;
+
+
+            cursorGlow.style.left =
+                glowX + "px";
+
+            cursorGlow.style.top =
+                glowY + "px";
+
+
+            requestAnimationFrame(
+                animateCursor
+            );
+
+        }
+
+
+        animateCursor();
+
+    }
+
+
+    /* =====================================================
+       PREMIUM CARD POINTER LIGHT
+       ===================================================== */
+
+    const premiumCards =
+        document.querySelectorAll(
+            ".service-card, " +
+            ".benefit-card, " +
+            ".type-card, " +
+            ".portfolio-card, " +
+            ".process-card, " +
+            ".feature-item"
+        );
+
+
+    premiumCards.forEach(
+        function (card) {
+
+            card.addEventListener(
+                "mousemove",
+                function (event) {
+
+                    if (
+                        window.innerWidth < 900
+                    ) {
+                        return;
+                    }
+
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+
+                    const x =
+                        event.clientX -
+                        rect.left;
+
+
+                    const y =
+                        event.clientY -
+                        rect.top;
+
+
+                    card.style.setProperty(
+                        "--pointer-x",
+                        x + "px"
+                    );
+
+
+                    card.style.setProperty(
+                        "--pointer-y",
+                        y + "px"
+                    );
+
+                }
+            );
+
+
+            card.addEventListener(
+                "mouseleave",
+                function () {
+
+                    card.style.removeProperty(
+                        "--pointer-x"
+                    );
+
+                    card.style.removeProperty(
+                        "--pointer-y"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       PREMIUM MAGNETIC BUTTONS
+       ===================================================== */
+
+    const magneticButtons =
+        document.querySelectorAll(
+            ".btn-primary, .nav-cta"
+        );
+
+
+    magneticButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "mousemove",
+                function (event) {
+
+                    if (
+                        window.innerWidth < 900
+                    ) {
+                        return;
+                    }
+
+
+                    const rect =
+                        button.getBoundingClientRect();
+
+
+                    const x =
+                        event.clientX -
+                        rect.left -
+                        rect.width / 2;
+
+
+                    const y =
+                        event.clientY -
+                        rect.top -
+                        rect.height / 2;
+
+
+                    button.style.transform =
+                        "translate(" +
+                        (x * 0.08) +
+                        "px, " +
+                        (y * 0.08) +
+                        "px)";
+
+                }
+            );
+
+
+            button.addEventListener(
+                "mouseleave",
+                function () {
+
+                    button.style.transform =
+                        "";
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       ACTIVE SECTION — BETTER SCROLL FEEL
+       ===================================================== */
+
+    let scrollTimeout;
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            document.body.classList.add(
+                "is-scrolling"
+            );
+
+
+            clearTimeout(
+                scrollTimeout
+            );
+
+
+            scrollTimeout =
+                setTimeout(
+                    function () {
+
+                        document.body.classList.remove(
+                            "is-scrolling"
+                        );
+
+                    },
+                    120
+                );
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    /* =====================================================
+       HERO PARALLAX — DESKTOP ONLY
+       ===================================================== */
+
+    const heroVisual =
+        document.querySelector(
+            ".hero-visual"
+        );
+
+
+    if (
+        heroVisual &&
+        window.matchMedia(
+            "(hover: hover) and (pointer: fine)"
+        ).matches
+    ) {
+
+        heroVisual.addEventListener(
+            "mousemove",
+            function (event) {
+
+                if (
+                    window.innerWidth < 1000
+                ) {
+                    return;
+                }
+
+
+                const rect =
+                    heroVisual.getBoundingClientRect();
+
+
+                const x =
+                    (event.clientX -
+                        rect.left) /
+                    rect.width -
+                    0.5;
+
+
+                const y =
+                    (event.clientY -
+                        rect.top) /
+                    rect.height -
+                    0.5;
+
+
+                const laptop =
+                    heroVisual.querySelector(
+                        ".laptop"
+                    );
+
+
+                const phone =
+                    heroVisual.querySelector(
+                        ".phone"
+                    );
+
+
+                if (laptop) {
+
+                    laptop.style.transform =
+                        "perspective(1100px) " +
+                        "rotateY(" +
+                        (-5 + x * 5) +
+                        "deg) " +
+                        "rotateX(" +
+                        (y * -3) +
+                        "deg) " +
+                        "translateY(" +
+                        (y * -8) +
+                        "px)";
+
+                }
+
+
+                if (phone) {
+
+                    phone.style.transform =
+                        "translate(" +
+                        (x * 8) +
+                        "px, " +
+                        (y * -8) +
+                        "px) rotate(2deg)";
+
+                }
+
+            }
+        );
+
+
+        heroVisual.addEventListener(
+            "mouseleave",
+            function () {
+
+                const laptop =
+                    heroVisual.querySelector(
+                        ".laptop"
+                    );
+
+
+                const phone =
+                    heroVisual.querySelector(
+                        ".phone"
+                    );
+
+
+                if (laptop) {
+                    laptop.style.transform =
+                        "";
+                }
+
+
+                if (phone) {
+                    phone.style.transform =
+                        "";
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       PERFORMANCE SAFETY
+       ===================================================== */
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        document.documentElement.classList.add(
+            "reduced-motion"
+        );
+
+    }
+
+
+})();
